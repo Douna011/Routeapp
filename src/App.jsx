@@ -1,19 +1,19 @@
 import './App.css';
-
 import { createBrowserRouter,RouterProvider } from "react-router-dom";
+import { HomePage,About,Service } from './pages';
 
 const router = createBrowserRouter([
   {
     path:"/",
-    element:<h2>Home Page</h2>,
+    element:<HomePage/>,
   },
   {
     path:"/about",
-    element:<h2>About Page</h2>,
+    element:<About/>,
   },
   {
     path:"/service",
-    element:<h2>Service Page</h2>,
+    element:<Service/>,
   }
 ]);
 
@@ -30,4 +30,4 @@ function App() {
       
 }
 
-export default App
+export default App;
