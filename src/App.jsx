@@ -1,11 +1,14 @@
 import './App.css';
 import { createBrowserRouter,RouterProvider } from "react-router-dom";
-import { HomePage,About,Service, Layout } from './pages';
+import { HomePage,About,Service,ErrorPage} from './pages';
+import RootLayout from './Layouts/RootLayouts';
+import AboutLayout from './Layouts/AboutLayout';
 
 const router = createBrowserRouter([
   {
     path:"/",
-    element:<Layout/>,
+    element:<RootLayout/>,
+    errorElement:<ErrorPage />,
     children:[ 
        {
     // path:"home",
@@ -14,7 +17,24 @@ const router = createBrowserRouter([
   },
        {
     path:"about",
-    element:<About/>,
+    element:<AboutLayout/>,
+    children:[
+      {
+        path:"vision",
+        element:<h4>Visions...</h4>
+      },
+     
+      {
+        path:"mission",
+        element:<h4>Mission...</h4>
+      },
+     
+      {
+        path:"goal",
+        element:<h4>Goals...</h4>
+      },
+     
+    ],
   },
   {
     path:"service",
@@ -28,14 +48,13 @@ const router = createBrowserRouter([
 
 
 function App() {
-
-
-  return <div className=" flex justify-center  w-0.5/2 bg-blue-400 p-2  ">
-     <RouterProvider router={router} />
-    <h2 className="font-bold bg-green-500 p-2 w-100 flex justify-center items-center rounded-2xl border-2">Hello world</h2>
-  </div> 
-  
-      
+  return (
+    <div className="min-h-screen bg-gray-50">
+      <div className="container mx-auto px-4 py-8">
+        <RouterProvider router={router} />
+      </div>
+    </div>
+  );
 }
 
 export default App;

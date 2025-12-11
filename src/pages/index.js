@@ -6,6 +6,7 @@
 
 //method 2 
 export { default as HomePage} from "./HomePage"
-export { default as About} from "./About"
+export { default as About} from "../Layouts/AboutLayout"
 export { default as Service} from "./Service"
-export { default as Layout} from "./layout"
+// 
+export { default as ErrorPage} from "./ErrorPage"
