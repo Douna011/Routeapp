@@ -6,7 +6,7 @@ const layout = () => {
   return (
     <div>
       <NavBar/>
-    <h1>Douna</h1>
+    {/* <h1>Douna</h1> */}
       <Outlet/>
       <Footer/> 
     </div>

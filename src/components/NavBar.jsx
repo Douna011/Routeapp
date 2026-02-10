@@ -3,18 +3,18 @@ import Logo from "../assets/M6.jpg";
 
 const NavBar = () => {
   return (
-    <nav className="bg-gradient-to-r from-blue-50 to-white shadow-lg sticky top-0 z-50">
+    <nav className="bg-linear-to-r from-blue-50 to-white shadow-lg sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           
           {/* Logo Section */}
-          <div className="flex-shrink-0 flex items-center">
+          <div className="shrink-0 flex items-center">
             <img 
               src={Logo} 
               alt="Douna" 
               className="h-10 w-10 md:h-12 md:w-12 object-cover rounded-full ring-2 ring-blue-200" 
             />
-            <span className="ml-3 text-xl md:text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+            <span className="ml-3 text-xl md:text-2xl font-bold bg-linear-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
               Douna
             </span>
           </div>
